@@ -1,0 +1,46 @@
+Foundations of Intelligent Systems
+Project 1 Rolling Die Mazes
+(Vinay More)
+(Ameya Nakayak)
+(Saurabh Wani)
+--------------------------------------------------------------------------------------
+Files in this directory:
+rdmaze.py:  rdmaze program to find solution path in puzzle
+			
+How to execute the program:
+	1. Run rdmaze.py
+	2. Heuristic Selection options will be shown as below:
+		Heuristic selection: 
+		Enter 1 for Manhattahn distance computation
+		Enter 2 for Euclidean distance computation
+		Enter 3 for computation based on maxmimum of x and y differences
+		Please enter 1 or 2 or 3: 
+	3. Enter 1, 2 or 3 as per requirement
+
+Interpretations:
+	1. The output file shows initial board with source and destination values 
+	2. Then it shows following information 
+	If solution is available
+		For example:		
+		No. of nodes put on the frontier:  62 (62 nodes were added on frontier queue)
+		No. of nodes visited:  47 (47 nodes were visited)
+		No. of moves in solution: 16 
+		- 0,0 - 1,0 - 1,1 - 0,1 - 0,0 - 1,0 - 2,0 - 3,0 - 3,1 - 4,1 - 4,2 - 4,3 - 4,4 - 3,4 - 3,3 - 2,3 - 2,4
+		(Sequence of moves shown above)
+	If solution is not available: 
+		For example:
+		No. of nodes put on the frontier:  3 (3 nodes were added in frontier)
+		No. of nodes visited:  3 (3 nodes were visited)
+		No Solution (There is no solution for this puzzle)
+	3. If solution is available, for each move till goal node shown in sequence
+		a.Updated grid with dice position is displayed using 'D' letter
+			e.g. 'D' letter denotes position of Dice
+			S . . . . 
+			D . * * * 
+			. * . . G 
+			. . . . . 
+			* . . . . 
+
+		b.Updated dice orientation is also shown below
+		    e.g. {'back': 3, 'below': 6, 'front': 4, 'right': 2, 'left': 5, 'up': 1}
+			Dice has 3 on back side, 4 on front, 2 on right side, 5 on left side, 1 on up side and 6 on below side.
